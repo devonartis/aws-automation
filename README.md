@@ -11,6 +11,7 @@ aws iam create-role --role-name CodeDeployServiceRole --assume-role-policy-docum
 
 ```
 Output ...
+Note: The XXXXX in the arn would be your AWS account number
 ```json
 {
     "Role": {
@@ -41,10 +42,27 @@ Output ...
 }
 ```
 
+* Call the attach role with 
+```bash
+
+aws iam attach-role-policy --role-name CodeDeployServiceRole --policy-arn arn:aws:iam::aws:policy/service-role/AWSCodeDeployRole
 
 
+```
+
+* Check to ensure role exists 
+
+```bash
+aws iam get-role --role-name CodeDeployServiceRole --query "Role.Arn" --output text
+arn:aws:iam::XXXXXXXXX:role/CodeDeployServiceRole
+```
 
 
 
 ##Tips
+
+AWS Cli tools
+
+[I'm an inline-style link](https://www.google.com)
+
 

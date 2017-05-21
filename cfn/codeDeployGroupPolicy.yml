@@ -1,0 +1,33 @@
+Resources:
+ mypolicy:
+   Type: AWS::IAM::Policy
+   Properties:
+     PolicyName: codeDeploySuperUsers
+     PolicyDocument:
+       Version: '2012-10-17'
+       Statement:
+       - Effect: Allow
+         Action:
+         - autoscaling:*
+         - codedeploy:*
+         - ec2:*
+         - elascticloadbalancing:*
+         - iam:AddRoleToInstanceProfile
+         - iam:CreateInstanceProfile
+         - iam:CreateRole
+         - iam:DeleteInstanceProfile
+         - iam:DeleteRole
+         - iam:DeleteRolePolicy
+         - iam:GetInstanceRolePolicy
+         - iam:ListInstanceRolePolicy
+         - iam:GetRole
+         - iam:GetRolePolicy
+         - iam:ListInstanceProfilesForRole
+         - iam:ListRolesPolicy
+         - iam:PassRole
+         - iam:PutRolePolicy
+         - iam:RemoveRoleFromInstanceProfile
+
+         Resource: "*"
+     Groups:
+     - CodeDeployUsers

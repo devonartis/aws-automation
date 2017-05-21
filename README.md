@@ -61,8 +61,10 @@ arn:aws:iam::XXXXXXXXX:role/CodeDeployServiceRole
 
 ##Tips
 
-AWS Cli tools
+######AWS CLI Autocomplete tools
 
-[I'm an inline-style link](https://www.google.com)
 
+[saws](https://github.com/donnemartin/saws)
+
+[command completer](http://docs.aws.amazon.com/cli/latest/userguide/cli-command-completion.html)
 
